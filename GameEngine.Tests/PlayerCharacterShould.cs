@@ -137,8 +137,9 @@ namespace GameEngine.Tests
 		//Data-driven Tests
 		//Sharing data to other classes and methods
 		[Theory]
-		[MemberData(nameof(ExternalHealthDamageTestData.TestData),
-			MemberType = typeof(ExternalHealthDamageTestData))]
+		//[MemberData(nameof(ExternalHealthDamageTestData.TestData),
+		//	MemberType = typeof(ExternalHealthDamageTestData))]
+		[HealthDamageData]
 		public void TakeDamage(int damage, int expectedHealth)
 		{
 			_sut.TakeDamage(damage);
